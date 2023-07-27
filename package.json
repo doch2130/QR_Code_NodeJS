@@ -1,0 +1,24 @@
+{
+  "name": "qr_code_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doch2130/QR_Code_NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doch2130/QR_Code_NodeJS/issues"
+  },
+  "homepage": "https://github.com/doch2130/QR_Code_NodeJS#readme",
+  "dependencies": {
+    "jimp": "^0.22.10",
+    "qrcode": "^1.5.3"
+  }
+}
