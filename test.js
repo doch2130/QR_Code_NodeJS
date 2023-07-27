@@ -3,6 +3,7 @@ const fs = require('fs');
 const Jimp = require('jimp');
 
 const dataToEncode = 'Hello, World2222!'; // QR 코드로 인코딩할 데이터
+// const dataToEncode = 'https://www.google.com/search?sxsrf=AB5stBgqYqSDGAcrbGoj2gGevoXdBTss1g:1690467621264&q=React-qrcode-logo&sa=X&ved=2ahUKEwjkiMfQiq-AAxUJQPUHHdMpAyQQ1QJ6BAgKEAE&cshid=1690467629205046&biw=2560&bih=1297&dpr=1#imgrc=k8YGRFWBK3PqcM&imgdii=75oququImrf1HM'; // QR 코드로 인코딩할 데이터
 
 // QR 코드 옵션 설정
 const options = {
@@ -45,11 +46,12 @@ async function applyDesignToQRCode() {
 
     // QR 코드 이미지의 크기에 맞게 배경 이미지를 리사이즈
     backgroundImage.resize(
-      qrCodeImage.bitmap.width / 2,
-      qrCodeImage.bitmap.height / 2
+      qrCodeImage.bitmap.width / 2.5,
+      qrCodeImage.bitmap.height / 2.5
     );
 
     // 배경 이미지가 보이지만, 카메라가 QR Code로 인식을 못함
+    // 이미지의 크기를 QR Code 데이터를 읽을 수 있는 정도로 사이즈를 조절해야 한다.
     // QR 코드 이미지와 배경 이미지를 합성하여 디자인 적용
     // qrCodeImage.composite(backgroundImage, 0, 0);
     qrCodeImage.composite(
